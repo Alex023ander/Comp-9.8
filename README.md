@@ -1,24 +1,29 @@
 # Comp-9.8
 
-public static void main(String[] args) {
-        Math Calculus=new Math("Calculus", 1, "Moderate Math", "Math", "A", "Hall");
-	History APWorld=new History("AP World", 1, "Hard History", "History", "AP", "Locke");
-	English English=new English("English", 4, "Moderate English", "English", "A", "Petrushun");
+public class Curriculum {
+    private String t="", d="",de="";
+    private int n=0;
+    public Curriculum(String title,int number,String description,String department){
+        t = title;
+        n = number;
+        d = description;
+        de = department;
         
-        System.out.println(Calculus);
-        Calculus.getTeacher();
-        Calculus.getLevel();
-        System.out.println("");
-        
-        System.out.println(APWorld);
-        APWorld.getTeacher();
-        APWorld.getLevel();
-        System.out.println("");
-        
-        System.out.println(English);
-        English.getTeacher();
-        English.getLevel();
-	}
-
+    }
+    public String getTitle(){
+        return t;
+    }
+    public String getDescription(){
+        return d;
+    }
+    public String getDepartment(){
+        return de;
+    }
+    public int getNumber(){
+        return n;
+    }
+    @Override
+    public String toString(){
+        return "Title: "+t+", \nDescription: "+d+", \nNumber: "+n+", \nDepartment: "+de;
+    }
 }
-    
